@@ -358,11 +358,8 @@ private:
   const double radiusEarth = 6371.0 * 1000;
 
   // HOTFIX for low memory systems, could be expanded with more testing
-  #if ((RAMEND - RAMSTART) > 3000 )
-    static const int crossingPointBufferSize = 100;
-  #else
-    static const int crossingPointBufferSize = 25;
-  #endif
+
+  static const int crossingPointBufferSize = 25;
 
   crossingPointBufferEntry crossingPointBuffer[crossingPointBufferSize];
   int crossingPointBufferIndex = 0;
